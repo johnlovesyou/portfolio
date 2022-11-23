@@ -81,6 +81,19 @@ function App() {
           </div>
         </div>
       </section>
+
+      {/* skills */}
+      <section className="skills">
+        <div className="inner">
+          <div className="notice_main">
+            <div className="box1"><span class="material-symbols-outlined">link</span></div>
+            <div className="box2">SKILLS</div>
+            <div className="box3"></div>
+          </div>
+
+
+        </div>
+      </section>
       
 
     </div>
