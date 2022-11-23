@@ -110,33 +110,33 @@ a {
   right: 0;
   margin: auto;
 }
-.Aboutme .notice_main {
+.notice_main {
   position: relative;
   margin-top: 50px;
   width: 420px;
   height: 100px;
   margin-bottom: 50px;
 }
-.Aboutme .notice_main .box1 {
+.notice_main .box1 {
   position: absolute;
   top: 15px;
   width: 100px;
 }
-.Aboutme .notice_main .box1 span {
+.notice_main .box1 span {
   font-size: 70px;
 }
-.Aboutme .notice_main .box2 {
+.notice_main .box2 {
   position: absolute;
   right: 0;
   font-weight: 900;
   font-size: 60px;
   width: fit-content;
 }
-.Aboutme .notice_main .box3 {
+.notice_main .box3 {
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 310px;
+  width: 320px;
   height: 2px;
   background-color: rgb(50, 50, 50);
 }
@@ -180,5 +180,19 @@ a {
 }
 
 
+/* skills */
+.skills {
+  height: 1000px;
+  background-color: rgb(156, 152, 152);
+  background-size: cover;
+  padding-top: 30px;
+}
+.skills .notice_main {
+  width: 300px;
+  height: 100px;
+  margin-bottom: 50px;
+}
 
-
+.skills .notice_main .box3 {
+  width: 185px;
+}
