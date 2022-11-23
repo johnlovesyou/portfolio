@@ -28,6 +28,8 @@ a {
   padding-top: 20px;
 }
 .menu {
+  position: fixed;
+  width: 1100px;
   color: black;
   height: 30px;
   display: flex;
@@ -182,7 +184,7 @@ a {
 
 /* skills */
 .skills {
-  height: 1000px;
+  height: 1100px;
   background-color: rgb(156, 152, 152);
   background-size: cover;
   padding-top: 30px;
@@ -192,7 +194,90 @@ a {
   height: 100px;
   margin-bottom: 50px;
 }
-
 .skills .notice_main .box3 {
   width: 185px;
 }
+
+.skills_content {
+  height: 700px;
+  display: flex;
+}
+.skills_content .skills_box1, 
+.skills_content .skills_box2,
+.skills_content .skills_box3 {
+  width: 90%;
+  height: 90%;
+  margin: 0 20px;
+}
+.skills_content .skills_contentbox {
+  position: relative;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-sizing: border-box;
+  box-shadow: 15px 15px 20px 5px grey;
+}
+.skills_content .skills_contentbox:hover {
+  transform: translate(0, 10px);
+  transition: all 0.3s;
+}
+.skills_content .skills_contentbox .name {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  font-size: 30px;
+  font-weight: bold;
+}
+.skills_content .skills_contentbox .bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 70px;
+  width: 300px;
+  height: 2px;
+  background-color: rgb(50, 50, 50);
+}
+.skills_content .skills_contentbox .image {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-size: cover;
+}
+.contentbox1 {
+  height: 730px;
+}
+.image1 {
+  width: 80%;
+  height: 600px;
+  background-image: url("../public/img/frontend.png")
+}
+.contentbox2 {
+  height: 470px;
+}
+.image2 {
+  width: 80%;
+  height: 350px;
+  background-image: url("../public/img/backend.png")
+}
+.contentbox3 {
+  height: 280px;
+  margin-top: 30px;
+}
+.image3 {
+  width: 80%;
+  height: 150px;
+  background-image: url("../public/img/version-control.png")
+}
+.contentbox4 {
+  height: 510px;
+}
+.image4 {
+  width: 80%;
+  height: 400px;
+  background-image: url("../public/img/deployment.png")
+}
+
+
