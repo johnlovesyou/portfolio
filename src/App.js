@@ -1,128 +1,118 @@
+import "./Reset.css";
 import "./App.css";
+import Title from "./Title.js";
+import Notice from "./Notice.js";
+import Skills from "./Skills.js";
+import { React, useEffect, useState } from "react";
+import { throttle } from "lodash";
+import $ from "jquery";
+import classnames from 'classnames';
+
 
 function App() {
+
+  let [whitecount, set_whitecount] = useState('')
+  
+  useEffect(()=>{
+    window.addEventListener('scroll', throttle(function() {
+      if (window.scrollY > 150) {
+        set_whitecount('show')
+      } else if (window.scrollY < 100) {
+        set_whitecount('')
+      }
+    }), 500)
+  });
+
+  
+
   return (
     <div className="App">
 
       {/* https://cdg-portfolio.com/ */}
       
-
       {/* header */}
+
       <header className="header">
-        <div className="inner">
-          
-          <div className="menu">
-            <div className="menu_1">
-              <a href="/">John's Portfolio</a>
-            </div>
-            <div className="menu_2"></div>
-            <div className="menu_3">
-              <div><a href="/">About me</a></div>
-              <div><a href="/">Skills</a></div>
-              <div><a href="/">Projects</a></div>
-              <div><a href="/">Career</a></div>
-            </div>
+        <div id='whitemenu' className={classnames('whitemenu', whitecount)}>
+          {/* hamburger_menu */}
+          <div className="hamburger_menu" id='hamburger_menu'>
+            <div className="hamburger_menulist" onClick={()=>{
+              let location_Aboutme = $('#Aboutme').offset().top - 120
+              window.scroll({top: location_Aboutme, behavior:'smooth'});
+              $('#hamburger_menu').fadeToggle();
+              }}>About me</div>
+            <div className="hamburger_menulist" onClick={()=>{
+              let location_Skills = $('#skills').offset().top - 75
+              window.scroll({top: location_Skills, behavior:'smooth'});
+              $('#hamburger_menu').fadeToggle();
+              }}>Skills</div>
+            <div className="hamburger_menulist">Projects</div>
+            <div className="hamburger_menulist">Career</div>
           </div>
-          <div className="title">
-            <div className="title_1">- 이요한 -</div>
-            <div className="title_2">웹 개발자 포트폴리오</div>
-            <div className="title_box1"></div>
-            <div className="title_3">안녕하세요</div>
-            <div className="title_4">공부가 취미인 웹 개발자입니다.</div>
-            <div className="title_box2">
-              <div><a href="/">더 알아보기 ↓</a></div>
-            </div>
-          </div>
-    
         </div>
+
+        {/* menu */}
+        <div className="menu" id="menu">
+          <div className="menu_1">
+            <div className="maintitle" onClick={()=>{
+              window.scroll({top:0, left:0, behavior:'smooth'})
+              }}>John's Portfolio</div>
+          </div>
+          <div className="menu_2"></div>
+          <div className="menu_3">
+            <div className="menulist" onClick={()=>{
+              let location_Aboutme = $('#Aboutme').offset().top - 120
+              window.scroll({top: location_Aboutme, behavior:'smooth'})}}>About me</div>
+            <div className="menulist" onClick={()=>{
+              let location_Skills = $('#skills').offset().top - 75
+              window.scroll({top: location_Skills, behavior:'smooth'})}}>Skills</div>
+            <div className="menulist">Projects</div>
+            <div className="menulist">Career</div>
+          </div>
+          <button class="hamburger_button" onClick={()=>{
+              $('#hamburger_menu').fadeToggle();
+            }}>&#9776;</button>
+        </div>
+
+        <Title></Title>
+
       </header>
+    
+
 
       {/* About me */}
-      <section className="Aboutme">
+      <section className="Aboutme" id="Aboutme">
         <div className="inner">
-          <div className="notice_main">
-            <div className="box1"><span class="material-symbols-outlined">link</span></div>
+          <div className="notice_name">
+            <div className="box1"><span className="material-symbols-outlined">link</span></div>
             <div className="box2">ABOUT ME</div>
             <div className="box3"></div>
           </div>
-          <div className="notice_second">
-            <div className="notice notice1">
-              <div className="box1"><span class="material-symbols-outlined">person</span></div>
-              <div className="box2">이름</div>
-              <div className="box3">이요한</div>
-            </div>
-            <div className="notice notice2">
-              <div className="box1"><span class="material-symbols-outlined">calendar_month</span></div>
-              <div className="box2">생년월일</div>
-              <div className="box3">1984.11.05</div>
-            </div>
-            <div className="notice notice3">
-              <div className="box1"><span class="material-symbols-outlined">location_on</span></div>
-              <div className="box2">주소</div>
-              <div className="box3">대구광역시 동구</div>
-            </div>
-          </div>
-          <div className="notice_third">
-            <div className="notice notice4">
-              <div className="box1"><span class="material-symbols-outlined">phone_in_talk</span></div>
-              <div className="box2">연락처</div>
-              <div className="box3">010-9584-5948</div>
-            </div>
-            <div className="notice notice5">
-              <div className="box1"><span class="material-symbols-outlined">mail</span></div>
-              <div className="box2">이메일</div>
-              <div className="box3">johnlovesyou@naver.com</div>
-            </div>
-            <div className="notice notice6">
-              <div className="box1"><span class="material-symbols-outlined">school</span></div>
-              <div className="box2">학력</div>
-              <div className="box3">경북대학교</div>
-            </div>
-          </div>
-        </div>
+          <Notice></Notice>
+        </div>        
       </section>
 
       {/* skills */}
-      <section className="skills">
+      <section className="skills" id='skills'>
         <div className="inner">
-
-          <div className="notice_main">
-            <div className="box1"><span class="material-symbols-outlined">link</span></div>
+          <div className="notice_name">
+            <div className="box1"><span className="material-symbols-outlined">link</span></div>
             <div className="box2">SKILLS</div>
             <div className="box3"></div>
           </div>
-          <div className="skills_content">
-            <div className="skills_box1">
-              <div className="skills_contentbox contentbox1">
-                <div className="name">Frontend</div>
-                <div className="bar"></div>
-                <div className="image image1"></div>
-              </div>
-            </div>
-            <div className="skills_box2">
-              <div className="skills_contentbox contentbox2">
-                <div className="name">Backend</div>
-                <div className="bar"></div>
-                <div className="image image2"></div>
-              </div>
-              <div className="skills_contentbox contentbox3">
-                <div className="name">Version Control</div>
-                <div className="bar"></div>
-                <div className="image image3"></div>
-              </div>
-            </div>
-            <div className="skills_box3">
-              <div className="skills_contentbox contentbox4">
-                <div className="name">Deployment</div>
-                <div className="bar"></div>
-                <div className="image image4"></div>
-              </div>
-            </div>
-          </div>
-          
+          <Skills></Skills>
         </div>
       </section>
-      
+
+      {/* project */}
+      {/* <section className="project">
+        <div className="inner">
+
+
+
+        </div>
+      </section> */}
+    
 
     </div>
   );

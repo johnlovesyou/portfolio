@@ -1,0 +1,110 @@
+.skills_content {
+  height: fit-content;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.skills_box {
+  margin: 10px 10px;
+  width: 30%;
+  height: fit-content;
+  position: relative;
+}
+.skills_contentbox {
+  position: relative;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 18rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-sizing: border-box;
+  box-shadow: 15px 15px 20px 5px grey;
+}
+.skills_contentbox:hover {
+  transform: translate(0, 10px);
+  transition: all 0.3s;
+}
+.skills_contentbox .name {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  font-size: 30px;
+  font-weight: bold;
+}
+.skills_contentbox .bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 70px;
+  width: 90%;
+  height: 1px;
+  background-color: rgb(137, 136, 136);
+}
+.skills_contentbox .image {
+  position: absolute;
+  width: 90%;
+  top: 100px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background-size: cover;
+}
+.contentbox1 {
+  height: 730px;
+}
+.image1 {
+  width: 80%;
+  height: 600px;
+  background-image: url("../public/img/frontend.png")
+}
+.contentbox2 {
+  height: 470px;
+  margin-bottom: 40px;
+}
+.image2 {
+  width: 80%;
+  height: 350px;
+  background-image: url("../public/img/backend.png")
+}
+.contentbox3 {
+  height: 280px;
+  margin-top: 30px;
+}
+.image3 {
+  width: 80%;
+  height: 150px;
+  background-image: url("../public/img/version-control.png")
+}
+.contentbox4 {
+  height: 510px;
+}
+.image4 {
+  width: 80%;
+  height: 400px;
+  background-image: url("../public/img/deployment.png")
+}
+
+
+
+@media screen and (max-width : 1000px) { 
+  .skills_content {
+    height: fit-content;
+  }
+  .skills_box {
+    margin: 1px 10px;
+    width: 45%;
+    height: fit-content;
+    position: relative;
+  }
+}
+@media screen and (max-width : 650px) { 
+  .skills_box {
+    width: 90%;
+    margin: 20px;
+  }
+}

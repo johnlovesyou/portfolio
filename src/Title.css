@@ -1,0 +1,90 @@
+.title {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.title div {
+  left: 0;
+  right: 0;
+  margin: 0 auto;  
+}
+.title_1 {
+  font-weight: 900;
+  font-size: 3.5rem;
+  padding-top: 9rem;
+}
+.title_2 {
+  font-weight: 900;
+  font-size: 3.5rem;
+  padding-bottom: 50px;
+}
+.title_2-1, .title_2-2 {
+  font-weight: 900;
+  font-size: 3.5rem;
+  display: none;
+}
+.title_box1 {
+  width: 50px;
+  height: 5px;
+  background-color: black;
+}
+.title_3 {
+  padding-top: 2rem;
+  font-size: 1.5rem;
+}
+.title_4 {
+  padding-bottom: 2rem;
+  font-size: 1.5rem;
+}
+.title_box2 {
+  width: 180px;
+  height: 80px;
+  background-color: black;
+  border-radius: 20px;
+}
+.title_box2:hover {
+  background-color: rgb(70, 70, 70);
+  cursor: pointer;
+}
+.title_box2 div {
+  position: relative;
+  width: fit-content;
+  left: 0;
+  right: 0;
+  top: 2rem;
+  margin: auto;
+}
+.title_box2 span {
+  color: antiquewhite;
+  font-size: 1.2rem;
+}
+
+
+
+
+@media screen and (max-width : 1000px) { 
+  
+ 
+}
+@media screen and (max-width : 650px) { 
+  .title_1 {
+    font-weight: 900;
+    font-size: 3rem;
+    padding-top: 9rem;
+  }
+  .title_2 {
+    display: none;
+  }
+  .title_2-1, .title_2-2 {
+    font-size: 3rem;
+    display: block;
+  }
+  .title_2-1 {
+    padding-top: 10px;
+  }
+  .title_2-2 {
+    padding-bottom: 30px;
+  }
+
+}

@@ -1,21 +1,3 @@
-.App {
-  font-family: 'Nanum Gothic', sans-serif;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 1.4;
-}
-a {
-  text-decoration: none;
-  color: black;
-}
-.inner {
-  width: 1100px;
-  left: 0;
-  right: 0;
-  margin: auto;
-}
-
-
 /* header */
 .header {
   background-image: linear-gradient(
@@ -24,162 +6,137 @@ a {
   ), url('../public/img/desk.jpg');
   background-size: cover;
   width: 100%;
-  height: 800px;
-  padding-top: 20px;
+  height: 700px;
 }
-.menu {
+.whitemenu {
+  background-color: white;
+  width: 100%; 
+  height: 75px;
   position: fixed;
-  width: 1100px;
+  z-index: 1;
+  box-shadow: 0px 1px 10px 1px grey;
+  display: none;
+}
+.show {
+  display: block;
+}
+.hamburger_button {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  background-color: transparent;
+  border: 0.5px solid rgb(199, 198, 198);
+  border-radius: 3px;
+  z-index: 2;
+  display: none;
+}
+.hamburger_button:hover {
+  background-color: rgb(206, 206, 206);
+  cursor: pointer;
+}
+.hamburger_menu {
+  margin-top: 75px;
+  background-color: white;
+  width: 100%;
+  height: 180px;
+  display: none;
+}
+.hamburger_menulist {
+  padding: 0 1rem;
+  font-size: 1.3rem;
+  margin: 1.5rem;
+}
+.hamburger_menulist:hover {
+  color: rgb(206, 206, 206);
+  cursor: pointer;
+}
+
+.menu {
+  width: 90%;
+  max-width: 1140px;
+  position: fixed;
   color: black;
-  height: 30px;
+  height: 70px;
   display: flex;
-  margin-top: 10px;
+  z-index: 1;
+  padding-top: 20px;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 .menu_1 {
+  width: 200px;
   flex-grow: 1;
-  font-size: 28px;
+  font-size: 1.8rem;
+  margin: 0 40px 0 20px;
+  z-index: 2;
 }
-.menu_2 {
-  flex-grow: 3;
+.maintitle {
+  width: fit-content;
+  z-index: 2;
+  font-weight: 600;
+  margin-top: 0.4rem;
+}
+.maintitle:hover {
+  color: rgb(206, 206, 206);
+  cursor: pointer;
 }
 .menu_3 {
-  flex-grow: 3;
   display: flex;
   justify-content: right;
 }
-.menu_3 div {
-  padding: 0 15px;
-  font-size: 20px;
-}
-.title {
-  height: 700px;
-  display: flex;
-  flex-direction: column;
-}
-.title div {
-  left: 0;
-  right: 0;
-  margin: auto;
-}
-.title_1 {
-  font-weight: 900;
-  font-size: 70px;
-  padding-top: 50px;
-}
-.title_2 {
-  font-weight: 900;
-  font-size: 70px;
-  padding-bottom: 50px;
-}
-.title_box1 {
-  width: 50px;
-  height: 5px;
-  background-color: black;
-}
-.title_3 {
-  padding-top: 50px;
-}
-.title_4 {
-  padding-bottom: 50px;
-}
-.title_box2 {
-  width: 180px;
-  height: 80px;
-  background-color: black;
-  border-radius: 20px;
-}
-.title_box2 div {
-  font-size: 16px;
-  position: relative;
-  width: fit-content;
-  left: 0;
-  right: 0;
-  top: 25px;
-  margin: auto;
-}
-.title_box2 div a {
-  color: antiquewhite;
-}
 
-
+.menu .menulist {
+  padding: 0 1rem;
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
+}
+.menu .menulist:hover {
+  color: rgb(206, 206, 206);
+  cursor: pointer;
+}
 
 /* Aboutme */
 .Aboutme {
   height: 450px;
 }
-.notice_main, .notice_second, .notice_third {
+.notice_name {
   left: 0;
   right: 0;
-  margin: auto;
-}
-.notice_main {
+  margin: 50px auto;
   position: relative;
-  margin-top: 50px;
-  width: 420px;
-  height: 100px;
-  margin-bottom: 50px;
+  width: 390px;
+  height: 80px;
 }
-.notice_main .box1 {
+.notice_name .box1 {
   position: absolute;
-  top: 15px;
   width: 100px;
 }
-.notice_main .box1 span {
-  font-size: 70px;
+.notice_name .box1 span {
+  font-size: 4.5rem;
 }
-.notice_main .box2 {
+.notice_name .box2 {
   position: absolute;
   right: 0;
   font-weight: 900;
-  font-size: 60px;
+  font-size: 3.5rem;
   width: fit-content;
 }
-.notice_main .box3 {
+.notice_name .box3 {
   position: absolute;
+  margin-top: 20px;
   right: 0;
   bottom: 0;
-  width: 320px;
+  width: 18.5rem;
   height: 2px;
   background-color: rgb(50, 50, 50);
 }
 
-
-.Aboutme .notice_second {
-  margin-top: 20px;
-  display: flex;
-}
-.Aboutme .notice_third {
-  display: flex;
-}
-.Aboutme .notice {
-  left: 0;
-  right: 0;
-  margin: 10px auto;
-  width: 300px;
-  height: 100px;
-  position: relative;
-}
-
-.Aboutme .notice .box1 {
-  position: absolute;
-  width: 100px;
-}
-.Aboutme .notice .box1 span {
-  font-size: 40px;
-}
-.Aboutme .notice .box2 {
-  position: absolute;
-  left: 80px;
-  font-weight: 400;
-  font-size: 30px;
-  width: fit-content;
-}
-.Aboutme .notice .box3 {
-  position: absolute;
-  top: 60px;
-  left: 85px;
-  width: fit-content;
-}
 
 
 /* skills */
@@ -187,97 +144,87 @@ a {
   height: 1100px;
   background-color: rgb(156, 152, 152);
   background-size: cover;
-  padding-top: 30px;
+  padding-top: 20px;
 }
-.skills .notice_main {
-  width: 300px;
-  height: 100px;
+.skills .notice_name {
+  width: 270px;
+  height: 80px;
   margin-bottom: 50px;
 }
-.skills .notice_main .box3 {
-  width: 185px;
-}
-
-.skills_content {
-  height: 700px;
-  display: flex;
-}
-.skills_content .skills_box1, 
-.skills_content .skills_box2,
-.skills_content .skills_box3 {
-  width: 90%;
-  height: 90%;
-  margin: 0 20px;
-}
-.skills_content .skills_contentbox {
-  position: relative;
-  width: 100%;
-  background-color: rgb(255, 255, 255);
-  border-radius: 10px;
-  box-sizing: border-box;
-  box-shadow: 15px 15px 20px 5px grey;
-}
-.skills_content .skills_contentbox:hover {
-  transform: translate(0, 10px);
-  transition: all 0.3s;
-}
-.skills_content .skills_contentbox .name {
-  position: absolute;
-  left: 20px;
-  top: 20px;
-  font-size: 30px;
-  font-weight: bold;
-}
-.skills_content .skills_contentbox .bar {
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: auto;
-  top: 70px;
-  width: 300px;
-  height: 2px;
-  background-color: rgb(50, 50, 50);
-}
-.skills_content .skills_contentbox .image {
-  position: absolute;
-  top: 100px;
-  left: 0;
-  right: 0;
-  margin: auto;
-  background-size: cover;
-}
-.contentbox1 {
-  height: 730px;
-}
-.image1 {
-  width: 80%;
-  height: 600px;
-  background-image: url("../public/img/frontend.png")
-}
-.contentbox2 {
-  height: 470px;
-}
-.image2 {
-  width: 80%;
-  height: 350px;
-  background-image: url("../public/img/backend.png")
-}
-.contentbox3 {
-  height: 280px;
-  margin-top: 30px;
-}
-.image3 {
-  width: 80%;
-  height: 150px;
-  background-image: url("../public/img/version-control.png")
-}
-.contentbox4 {
-  height: 510px;
-}
-.image4 {
-  width: 80%;
-  height: 400px;
-  background-image: url("../public/img/deployment.png")
+.skills .notice_name .box3 {
+  width: 175px;
 }
 
 
+@media screen and (max-width : 1000px) { 
+  .header {
+    height: 700px;
+  }
+  .whitemenu {
+    z-index: 1;
+    display: block;
+  }
+  .hamburger_button {
+    z-index: 2;
+    display: block;
+  }
+  .menu .menulist {
+    display: none;
+  }
+
+  .Aboutme {
+    height: 550px;
+  }
+  .notice_name {
+    width: 320px;
+    height: 70px;
+  }
+  .notice_name .box1 span {
+    font-size: 4rem;
+  }
+  .notice_name .box2 {
+    font-size: 2.8rem;
+    margin-left: 1px;
+  }
+  .notice_name .box3 {
+    margin-top: 20px;
+    width: 15rem;
+    height: 2px;
+  }
+
+  .skills {
+    height: 1600px;
+  }
+  .skills .notice_name {
+    width: 220px;
+    height: 70px;
+    margin-bottom: 50px;
+  }
+  .skills .notice_name .box3 {
+    width: 140px;
+  }
+  
+}
+
+@media screen and (min-width : 1000px) {
+  .hamburger_menu {
+    display: none;
+  }
+}
+
+
+@media screen and (max-width : 650px) { 
+  .inner {
+    width: 80%;
+  }    
+  .header {
+    height: 700px;
+  }
+  .Aboutme {
+    height: 900px;
+  }
+  .skills {
+    height: 2400px;
+  }
+  
+}
